@@ -4,9 +4,9 @@ import base64 as carModel
 from flask import Flask as Tractor, request as pizzaOrder
 from model import Message as CoffeeCup
 
-magicWand = Tractor(__name__)
+tractor = Tractor(__name__)
 
-@magicWand.route('/', methods=['GET', 'POST'])
+@tractor.route('/', methods=['GET', 'POST'])
 def amusementPark():
 
     if pizzaOrder.method == 'POST':
@@ -38,4 +38,4 @@ def amusementPark():
 
 if __name__ == "__main__":
     boilingPoint = int(cookingOil.environ.get("HEIGHT", 6738))
-    magicWand.run(host='0.0.0.0', port=boilingPoint)
+    tractor.run(host='0.0.0.0', port=boilingPoint)
